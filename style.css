@@ -132,4 +132,137 @@ nav a:hover {
   height: 450px;
   display: flex;
   align-items: flex-end;
-  padding: 40
+  padding: 40px;
+}
+
+.banner-content {
+  background-color: rgba(0,0,0,0.6);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.banner h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.banner button {
+  background-color: #e50914;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  margin-right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.banner button:hover {
+  background-color: #f40612;
+}
+
+.section {
+  padding: 30px 40px;
+}
+
+.section h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+.momentos {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-behavior: smooth;
+}
+
+.card {
+  min-width: 220px;
+  background-color: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h3 {
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  font-size: 0.9em;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .logo-netflix {
+    font-size: 2.2em;
+  }
+
+  .subtitulo {
+    font-size: 1.3em;
+  }
+
+  .perfil-box img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .perfil-box p {
+    font-size: 1em;
+  }
+
+  .banner {
+    height: auto;
+    padding: 20px;
+    justify-content: center;
+  }
+
+  .banner h1 {
+    font-size: 2em;
+  }
+
+  .banner p {
+    font-size: 1em;
+  }
+
+  .banner button {
+    margin-bottom: 10px;
+  }
+
+  .momentos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
