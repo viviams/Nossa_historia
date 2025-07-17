@@ -10,6 +10,7 @@ body {
   color: #fff;
 }
 
+/* Estilo do header */
 header {
   background-color: #111;
   display: flex;
@@ -31,10 +32,10 @@ nav a {
   font-size: 1em;
 }
 
+/* Banner */
 .banner {
   background: url('https://i.imgur.com/UvQbNQv.jpeg') no-repeat center center/cover;
   height: 450px;
-  position: relative;
   display: flex;
   align-items: flex-end;
   padding: 40px;
@@ -72,6 +73,7 @@ nav a {
   background-color: #f40612;
 }
 
+/* Seção dos momentos */
 .section {
   padding: 30px 40px;
 }
@@ -116,6 +118,57 @@ nav a {
   font-size: 1.1em;
 }
 
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  font-size: 0.9em;
+}
+
+/* Estilo da página de perfis */
+.tela-perfis {
+  background-color: #141414;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.titulo {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.perfis {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.perfil {
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.perfil:hover {
+  transform: scale(1.1);
+}
+
+.perfil img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 3px solid #e50914;
+  object-fit: cover;
+}
+
+.perfil p {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
 footer {
   text-align: center;
   padding: 20px;
