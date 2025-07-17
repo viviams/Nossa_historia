@@ -10,9 +10,97 @@ body {
   color: #fff;
 }
 
-/* Estilo do header */
+/* Tela de seleção de perfil */
+.netflix-home {
+  background: url('https://i.imgur.com/EqgFlLy.jpeg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfil-container {
+  max-width: 900px;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+.logo-netflix {
+  font-size: 3.5em;
+  color: #e50914;
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.subtitulo {
+  font-size: 1.8em;
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+.perfis-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.perfil-box {
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.perfil-box img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  border: 3px solid #e50914;
+  object-fit: cover;
+  background-color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+.perfil-box p {
+  margin-top: 15px;
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.perfil-box:hover {
+  transform: scale(1.08);
+}
+
+.perfil-box:hover img {
+  box-shadow: 0 0 20px #e50914;
+}
+
+.perfil-box.editar img {
+  border: 2px dashed gray;
+  background-color: #888;
+  opacity: 0.5;
+}
+
+.perfil-box.editar:hover img {
+  box-shadow: 0 0 15px #999;
+}
+
+/* Estilo da página do perfil */
+
 header {
   background-color: #111;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,216 +115,21 @@ header {
 
 nav a {
   color: #fff;
-  margin-left: 20px;
   text-decoration: none;
   font-size: 1em;
+  padding: 8px 15px;
+  border: 1px solid transparent;
+  transition: 0.3s;
 }
 
-/* Banner */
+nav a:hover {
+  border-bottom: 1px solid #fff;
+}
+
 .banner {
-  background: url('https://i.imgur.com/UvQbNQv.jpeg') no-repeat center center/cover;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent),
+              url('https://i.imgur.com/UvQbNQv.jpeg') no-repeat center center/cover;
   height: 450px;
   display: flex;
   align-items: flex-end;
-  padding: 40px;
-}
-
-.banner-content {
-  background-color: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
-}
-
-.banner h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
-.banner p {
-  max-width: 600px;
-  margin-bottom: 20px;
-  font-size: 1.2em;
-}
-
-.banner button {
-  background-color: #e50914;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: white;
-  margin-right: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.banner button:hover {
-  background-color: #f40612;
-}
-
-/* Seção dos momentos */
-.section {
-  padding: 30px 40px;
-}
-
-.section h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-
-.momentos {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  scroll-behavior: smooth;
-}
-
-.card {
-  min-width: 200px;
-  background-color: #222;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s;
-  flex-shrink: 0;
-}
-
-.card:hover {
-  transform: scale(1.1);
-}
-
-.card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 10px;
-}
-
-.card-content h3 {
-  margin-bottom: 8px;
-  font-size: 1.1em;
-}
-
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  font-size: 0.9em;
-}
-
-/* Estilo da página de perfis */
-.tela-perfis {
-  background-color: #141414;
-  color: white;
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.titulo {
-  font-size: 2.5em;
-  margin-bottom: 40px;
-  color: #fff;
-}
-
-.perfis {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.perfil {
-  text-decoration: none;
-  color: white;
-  transition: transform 0.3s;
-}
-
-.perfil:hover {
-  transform: scale(1.1);
-}
-
-.perfil img {
-  width: 150px;
-  height: 150px;
-  border-radius: 10px;
-  border: 3px solid #e50914;
-  object-fit: cover;
-}
-
-.perfil p {
-  margin-top: 10px;
-  font-size: 1.2em;
-}
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  font-size: 0.9em;
-}
-.netflix-home {
-  background: url('https://i.imgur.com/EqgFlLy.jpeg') no-repeat center center/cover;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.overlay {
-  background: rgba(0,0,0,0.7);
-  width: 100%;
-  height: 100%;
-  padding-top: 60px;
-}
-
-.logo-netflix {
-  font-size: 2.5em;
-  color: #e50914;
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.subtitulo {
-  color: #fff;
-  font-size: 1.5em;
-  margin-bottom: 40px;
-}
-
-.perfis-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.perfil-box {
-  text-decoration: none;
-  color: white;
-  transition: transform 0.3s;
-}
-
-.perfil-box:hover {
-  transform: scale(1.08);
-}
-
-.perfil-box img {
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  border: 3px solid #e50914;
-  object-fit: cover;
-  background-color: #333;
-}
-
-.perfil-box p {
-  margin-top: 10px;
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.perfil-box.editar img {
-  border: 2px solid gray;
-  background-color: #888;
-}
+  padding: 40
