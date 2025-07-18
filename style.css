@@ -42,15 +42,16 @@ body.gerenciar-perfis {
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: 5px;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 .foto-perfil img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 5px;
+  border-radius: 8px;
+  border: none;
 }
 
 .icone-editar {
@@ -59,14 +60,16 @@ body.gerenciar-perfis {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 8px;
+  padding: 10px;
   border-radius: 50%;
   color: white;
+  font-size: 14px;
 }
 
 .perfil-box p {
   margin-top: 10px;
   font-size: 1em;
+  font-weight: bold;
 }
 
 .btn-concluir {
