@@ -106,10 +106,11 @@ body.pagina-serie {
   width: 100%;
   z-index: 999;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;  /* ALTERADO para aproximar os itens */
   align-items: center;
   background: #141414;
   padding: 20px 40px;
+  gap: 40px;  /* espaço entre logo e nav */
 }
 
 .logo-serie {
