@@ -1,79 +1,122 @@
 body {
-    background-color: #141414; /* Fundo escuro como Netflix */
-    color: #E5E5E5; /* Cinza claro para o texto */
+    /* Cor de fundo escura, típica da Netflix */
+    background-color: #141414;
+    /* Cor do texto geral, um cinza claro */
+    color: #E5E5E5;
+    /* Fonte similar à da Netflix, usando opções padrão */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* Alinha o conteúdo principal (container) no centro da tela, tanto vertical quanto horizontalmente */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Altura total da viewport */
+    /* Garante que o corpo ocupe pelo menos 100% da altura da tela */
+    min-height: 100vh;
+    /* Remove margens padrão do body */
     margin: 0;
+    /* Oculta qualquer conteúdo que transborde (útil para rolagem em telas pequenas) */
+    overflow: hidden; /* Adicionado para evitar rolagem desnecessária se a tela for pequena */
 }
 
 .container {
+    /* Centraliza todo o texto dentro do container */
     text-align: center;
+    /* Espaçamento interno */
     padding: 20px;
 }
 
 h1 {
+    /* Tamanho do título "Quem está assistindo?" */
     font-size: 3em;
+    /* Margem abaixo do título */
     margin-bottom: 50px;
+    /* Tira o negrito padrão do h1 */
     font-weight: normal;
 }
 
 .profile-grid {
+    /* Usa Flexbox para organizar os cards em uma linha */
     display: flex;
+    /* Centraliza os cards horizontalmente dentro do grid */
     justify-content: center;
-    flex-wrap: wrap; /* Permite que os perfis quebrem para a próxima linha */
-    gap: 20px; /* Espaço entre os perfis */
+    /* Permite que os cards quebrem para a próxima linha se não houver espaço suficiente */
+    flex-wrap: wrap;
+    /* Espaço entre cada card de perfil */
+    gap: 20px;
+    /* Margem abaixo do grid de perfis */
     margin-bottom: 50px;
 }
 
 .profile-card {
+    /* Cada card é um container flex para a imagem e o nome */
     display: flex;
+    /* Organiza a imagem e o nome em coluna (um abaixo do outro) */
     flex-direction: column;
+    /* Centraliza a imagem e o nome horizontalmente dentro do card */
     align-items: center;
+    /* Indica que é clicável */
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
+    /* Animação suave ao passar o mouse */
+    transition: transform 0.2s ease-in-out, border 0.2s ease-in-out; /* Adicionado border para transição do hover */
 }
 
 .profile-card:hover {
+    /* Pequeno aumento de tamanho ao passar o mouse */
     transform: scale(1.05);
 }
 
 .profile-card img {
-    width: 150px; /* Ajuste o tamanho conforme necessário */
-    height: 150px; /* Ajuste o tamanho conforme necessário */
-    border-radius: 4px; /* Cantos ligeiramente arredondados para imagens */
-    border: 3px solid transparent; /* Borda padrão */
-    object-fit: cover; /* Garante que as imagens cubram a área sem distorção */
+    /* Tamanho das imagens de perfil */
+    width: 150px;
+    height: 150px;
+    /* Cantos levemente arredondados para as imagens */
+    border-radius: 4px;
+    /* Borda transparente por padrão */
+    border: 3px solid transparent;
+    /* Garante que a imagem preencha o espaço sem distorcer */
+    object-fit: cover;
 }
 
 .profile-card:hover img {
-    border: 3px solid #E5E5E5; /* Borda branca ao passar o mouse */
+    /* Borda branca ao passar o mouse */
+    border: 3px solid #E5E5E5;
 }
 
 .profile-card span {
+    /* Espaçamento acima do nome */
     margin-top: 10px;
+    /* Tamanho da fonte do nome */
     font-size: 1.2em;
-    color: grey; /* Cor do texto padrão */
+    /* Cor padrão do nome (cinza) */
+    color: grey;
+    /* Transição de cor suave */
+    transition: color 0.2s ease-in-out;
 }
 
 .profile-card:hover span {
-    color: #E5E5E5; /* Texto branco ao passar o mouse */
+    /* Cor do nome fica branca ao passar o mouse */
+    color: #E5E5E5;
 }
 
 .manage-profiles-btn {
+    /* Fundo transparente para o botão */
     background-color: transparent;
+    /* Cor do texto do botão (cinza) */
     color: grey;
+    /* Borda fina cinza */
     border: 1px solid grey;
+    /* Preenchimento interno do botão */
     padding: 10px 20px;
+    /* Tamanho da fonte do botão */
     font-size: 1.2em;
+    /* Indica que é clicável */
     cursor: pointer;
+    /* Animação suave ao passar o mouse */
     transition: all 0.2s ease-in-out;
 }
 
 .manage-profiles-btn:hover {
+    /* Cor do texto do botão fica branca ao passar o mouse */
     color: #E5E5E5;
+    /* Cor da borda do botão fica branca ao passar o mouse */
     border-color: #E5E5E5;
 }
-
