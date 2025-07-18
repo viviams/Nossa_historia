@@ -5,25 +5,25 @@
   <title>Viviam & Amor</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="pagina-serie">
+<body>
 
-  <header class="header-serie">
-    <div class="logo-serie">❤️ Viviam & Amor ❤️</div>
+  <header class="header">
+    <h1>❤️ Viviam & Amor ❤️</h1>
     <nav>
       <a href="index.html">Sair do Perfil</a>
     </nav>
   </header>
 
-  <!-- Destaque principal com clique para abrir vídeo -->
-  <section class="destaque" onclick="abrirVideo()">
-    <div class="conteudo-destaque">
-      <h1>Nosso Capítulo Especial</h1>
-      <p>Clique para reviver um dos momentos mais lindos da nossa história.</p>
+  <!-- Seção destacada (como banner principal) -->
+  <section class="destaque">
+    <h2>Nosso Capítulo Especial</h2>
+    <div class="banner" onclick="abrirVideo()">
+      <img src="https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg" alt="Banner do Vídeo">
       <button>Assistir agora</button>
     </div>
   </section>
 
-  <!-- Modal de vídeo (abre ao clicar) -->
+  <!-- Modal do vídeo -->
   <div class="modal-video" id="modalVideo">
     <div class="video-container">
       <span class="fechar" onclick="fecharVideo()">&times;</span>
@@ -31,13 +31,14 @@
     </div>
   </div>
 
-  <!-- Carrossel -->
+  <!-- Carrossel de imagens -->
   <section class="carrossel">
     <h2>Anos Inesquecíveis</h2>
-    <div class="itens">
+    <div class="linha-carrossel">
       <img src="https://i.imgur.com/KCHkOn5.jpeg" alt="2019">
       <img src="https://i.imgur.com/B0Ml0ZV.jpeg" alt="2020">
       <img src="https://i.imgur.com/lM6nDOg.jpeg" alt="2021">
+      <!-- Adicione mais imagens aqui -->
     </div>
   </section>
 
