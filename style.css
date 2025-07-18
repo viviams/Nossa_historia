@@ -5,264 +5,84 @@
   font-family: Arial, sans-serif;
 }
 
-body {
-  background-color: #141414;
+body.gerenciar-perfis {
+  background-color: #000;
   color: #fff;
-}
-
-/* Tela de seleção de perfil */
-.netflix-home {
-  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1RvnOa6omMXnvZGcIOg62LQA36BV2TUyB5g&s') no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.container {
   text-align: center;
-}
-
-.overlay {
-  background: rgba(0, 0, 0, 0.7);
   width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
 }
 
-.perfil-container {
-  max-width: 900px;
-  width: 100%;
-  padding: 40px 20px;
-}
-
-.logo-netflix {
-  font-size: 3.5em;
-  color: #e50914;
-  font-weight: bold;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-}
-
-.subtitulo {
+.container h1 {
   font-size: 1.8em;
-  color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .perfis-grid {
   display: flex;
   justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
-  gap: 40px;
+  margin-bottom: 40px;
 }
 
 .perfil-box {
-  text-decoration: none;
-  color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  width: 120px;
 }
 
-.perfil-box img {
-  width: 200px;
-  height: 200px;
-  border-radius: 10px;
-  border: 3px solid #e50914;
+.foto-perfil {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  background-color: #333;
-  transition: box-shadow 0.3s ease;
+  border-radius: 5px;
+}
+
+.icone-editar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px;
+  border-radius: 50%;
+  color: white;
 }
 
 .perfil-box p {
-  margin-top: 15px;
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-.perfil-box:hover {
-  transform: scale(1.08);
-}
-
-.perfil-box:hover img {
-  box-shadow: 0 0 20px #e50914;
-}
-
-.perfil-box.editar img {
-  border: 2px dashed gray;
-  background-color: #888;
-  opacity: 0.5;
-}
-
-.perfil-box.editar:hover img {
-  box-shadow: 0 0 15px #999;
-}
-
-/* Estilo da página do perfil */
-
-header {
-  background-color: #111;
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-}
-
-.logo {
-  font-size: 2em;
-  color: #e50914;
-  font-weight: bold;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
+  margin-top: 10px;
   font-size: 1em;
-  padding: 8px 15px;
-  border: 1px solid transparent;
+}
+
+.btn-concluir {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 3px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-nav a:hover {
-  border-bottom: 1px solid #fff;
+.btn-concluir:hover {
+  background-color: #e5e5e5;
 }
 
-.banner {
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent),
-              url('https://i.imgur.com/UvQbNQv.jpeg') no-repeat center center/cover;
-  height: 450px;
-  display: flex;
-  align-items: flex-end;
-  padding: 40px;
-}
-
-.banner-content {
-  background-color: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 600px;
-}
-
-.banner h1 {
-  font-size: 3em;
-  margin-bottom: 10px;
-}
-
-.banner p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.banner button {
-  background-color: #e50914;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: white;
-  margin-right: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.banner button:hover {
-  background-color: #f40612;
-}
-
-.section {
-  padding: 30px 40px;
-}
-
-.section h2 {
-  font-size: 1.8em;
-  margin-bottom: 20px;
-}
-
-.momentos {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-  scroll-behavior: smooth;
-}
-
-.card {
-  min-width: 220px;
-  background-color: #222;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s;
-  flex-shrink: 0;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 15px;
-}
-
-.card-content h3 {
-  font-size: 1.2em;
-  margin-bottom: 8px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #111;
-  font-size: 0.9em;
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-  .logo-netflix {
-    font-size: 2.2em;
-  }
-
-  .subtitulo {
-    font-size: 1.3em;
-  }
-
-  .perfil-box img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .perfil-box p {
-    font-size: 1em;
-  }
-
-  .banner {
-    height: auto;
-    padding: 20px;
-    justify-content: center;
-  }
-
-  .banner h1 {
-    font-size: 2em;
-  }
-
-  .banner p {
-    font-size: 1em;
-  }
-
-  .banner button {
-    margin-bottom: 10px;
-  }
-
-  .momentos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card {
-    width: 90%;
-  }
-}
 
