@@ -1,91 +1,75 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
-
-body.gerenciar-perfis {
-  background-color: #000;
+  background-color: #141414;
   color: #fff;
-  height: 100vh;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 .container {
   text-align: center;
-  width: 100%;
-  padding: 20px;
 }
 
-.container h1 {
-  font-size: 1.8em;
-  margin-bottom: 40px;
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
 }
 
-.perfis-grid {
+.perfis {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 40px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-.perfil-box {
-  text-align: center;
+.perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s;
+}
+
+.perfil img {
   width: 120px;
-}
-
-.foto-perfil {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+  height: 120px;
   border-radius: 8px;
+  border: 3px solid transparent;
+  transition: border 0.3s, transform 0.3s;
 }
 
-.foto-perfil img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  border: none;
+.perfil:hover img {
+  border-color: #fff;
+  transform: scale(1.05);
 }
 
-.icone-editar {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 10px;
-  border-radius: 50%;
-  color: white;
-  font-size: 14px;
-}
-
-.perfil-box p {
+.perfil span {
   margin-top: 10px;
-  font-size: 1em;
-  font-weight: bold;
+  font-size: 1.2em;
 }
 
-.btn-concluir {
-  background-color: white;
-  color: black;
-  border: none;
-  padding: 10px 30px;
-  font-weight: bold;
+.gerenciar {
+  margin-top: 30px;
+  padding: 10px 20px;
   font-size: 1em;
-  border-radius: 3px;
+  background-color: transparent;
+  border: 1px solid #888;
+  color: #888;
   cursor: pointer;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
-.btn-concluir:hover {
-  background-color: #e5e5e5;
+.gerenciar:hover {
+  color: #fff;
+  border-color: #fff;
 }
 
 
