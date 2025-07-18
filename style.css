@@ -106,22 +106,24 @@ body.pagina-serie {
   width: 100%;
   z-index: 999;
   display: flex;
-  justify-content: flex-start;  /* ALTERADO para aproximar os itens */
   align-items: center;
   background: #141414;
-  padding: 20px 40px;
-  gap: 40px;  /* espaço entre logo e nav */
+  padding: 20px 20px; /* padding lateral reduzido */
+  gap: 20px; /* gap menor entre logo e nav */
 }
 
 .logo-serie {
   font-size: 1.8em;
   color: red;
   font-weight: bold;
+  white-space: nowrap; /* evitar quebra */
 }
 
 .header-serie nav {
   display: flex;
-  gap: 20px;
+  gap: 15px; /* espaçamento entre links menor */
+  flex-wrap: nowrap; /* manter em linha */
+  margin-left: 0;
 }
 
 .header-serie nav a {
@@ -130,6 +132,7 @@ body.pagina-serie {
   font-weight: bold;
   font-size: 0.95em;
   transition: color 0.3s;
+  white-space: nowrap; /* evitar quebra do texto */
 }
 
 .header-serie nav a:hover {
