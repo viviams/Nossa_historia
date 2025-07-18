@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Netflix - Quem está assistindo?</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Gerenciar perfis</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body>
-    <div class="container">
-        <h1>Quem está assistindo?</h1>
-        <div class="profile-grid">
-            <div class="profile-card">
-                <img src="https://i.ibb.co/Xz953B1/dustin.png" alt="Átylla">
-                <span>Átylla</span>
-            </div>
-            <div class="profile-card">
-                <img src="https://i.ibb.co/L5w2r27/purple-avatar.png" alt="Gercelina">
-                <span>Gercelina</span>
-            </div>
-            <div class="profile-card">
-                <img src="https://i.ibb.co/L5r03c2/rabbit.png" alt="Jô">
-                <span>Jô</span>
-            </div>
-            <div class="profile-card">
-                <img src="https://i.ibb.co/c801J9Y/the-rock.png" alt="James">
-                <span>James</span>
-            </div>
-            <div class="profile-card">
-                <img src="https://i.ibb.co/7YpG63R/baby.png" alt="Itallo">
-                <span>Itallo</span>
-            </div>
-            </div>
-        <button class="manage-profiles-btn">Gerenciar perfis</button>
+<body class="gerenciar-perfis">
+  <div class="container">
+    <h1>Gerenciar perfis:</h1>
+
+    <div class="perfis-grid">
+      <!-- Perfil Ítallo -->
+      <div class="perfil-box">
+        <div class="foto-perfil">
+          <img src="https://upload.wikimedia.org/wikipedia/pt/thumb/5/52/Ned_Stark-Sean_Bean.jpg/250px-Ned_Stark-Sean_Bean.jpg" alt="Ítallo">
+          <div class="icone-editar"><i class="fas fa-pencil-alt"></i></div>
+        </div>
+        <p>Ítallo</p>
+      </div>
+
+      <!-- Perfil Viviam -->
+      <div class="perfil-box">
+        <div class="foto-perfil">
+          <img src="https://rollingstone.com.br/media/_versions/game-of-thrones-daenerys-emilia-clarke-foto-reproducao-hbo_widemd.jpg" alt="Viviam">
+          <div class="icone-editar"><i class="fas fa-pencil-alt"></i></div>
+        </div>
+        <p>Viviam</p>
+      </div>
+
+      <!-- Perfil Eloah -->
+      <div class="perfil-box">
+        <div class="foto-perfil">
+          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQysITtGKzr8RSkOpD28HBrjnIe-wXOwz-i8G8yTmUjDgE23eYQb3G4q7rkzi_znPtQCTIjAyvzZ1Mw8udtAoH7jRscDS8svXnHL7MvG38" alt="Eloah">
+          <div class="icone-editar"><i class="fas fa-pencil-alt"></i></div>
+        </div>
+        <p>Eloah</p>
+      </div>
     </div>
+
+    <button class="btn-concluir">Concluído</button>
+  </div>
 </body>
 </html>
