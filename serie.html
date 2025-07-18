@@ -1,58 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Nossa Série - Viviam & Amor</title>
-  <link rel="stylesheet" href="style.css"> </head>
-<body>
+  <meta charset="UTF-8">
+  <title>Viviam & Amor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-serie">
 
-  <header>
-    <div class="logo">❤️ Nossa História ❤️</div>
-    <nav>
-      <a href="index.html">Sair do Perfil</a>     </nav>
-  </header>
+  <header class="header-serie">
+    <div class="logo-serie">❤️ Viviam & Amor ❤️</div>
+    <nav>
+      <a href="index.html">Sair do Perfil</a>
+    </nav>
+  </header>
 
-  <div class="banner">
-    <div class="banner-content">
-      <h1>Viviam & Amor</h1>
-      <p>Uma série romântica baseada em momentos reais, cheia de capítulos inesquecíveis.</p>
-      <button>Assistir</button>
-      <button>Ver Detalhes</button>
-    </div>
-  </div>
+  <!-- Destaque principal com clique para abrir vídeo -->
+  <section class="destaque" onclick="abrirVideo()">
+    <div class="conteudo-destaque">
+      <h1>Nosso Capítulo Especial</h1>
+      <p>Clique para reviver um dos momentos mais lindos da nossa história.</p>
+      <button>Assistir agora</button>
+    </div>
+  </section>
 
-  <div class="section">
-    <h2>Anos Inesquecíveis</h2>
-    <div class="momentos">
-      <div class="card">
-        <img src="https://i.imgur.com/KCHkOn5.jpeg" alt="2019">
-        <div class="card-content">
-          <h3>2019 - Nosso começo</h3>
-          <p>A primeira vez que te vi, meu coração soube.</p>
-        </div>
-      </div>
+  <!-- Modal de vídeo (abre ao clicar) -->
+  <div class="modal-video" id="modalVideo">
+    <div class="video-container">
+      <span class="fechar" onclick="fecharVideo()">&times;</span>
+      <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 
-      <div class="card">
-        <img src="https://i.imgur.com/B0Ml0ZV.jpeg" alt="2020">
-        <div class="card-content">
-          <h3>2020 - Aventuras</h3>
-          <p>As viagens, os sorrisos, e as surpresas.</p>
-        </div>
-      </div>
+  <!-- Carrossel -->
+  <section class="carrossel">
+    <h2>Anos Inesquecíveis</h2>
+    <div class="itens">
+      <img src="https://i.imgur.com/KCHkOn5.jpeg" alt="2019">
+      <img src="https://i.imgur.com/B0Ml0ZV.jpeg" alt="2020">
+      <img src="https://i.imgur.com/lM6nDOg.jpeg" alt="2021">
+    </div>
+  </section>
 
-      <div class="card">
-        <img src="https://i.imgur.com/lM6nDOg.jpeg" alt="2021">
-        <div class="card-content">
-          <h3>2021 - Crescendo juntos</h3>
-          <p>Superamos desafios, lado a lado.</p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <footer>
+    <p>Feito com ❤️ por Viviam</p>
+  </footer>
 
-  <footer>
-    <p>Feito com ❤️ por Viviam</p>
-  </footer>
+  <script>
+    function abrirVideo() {
+      document.getElementById('modalVideo').style.display = 'flex';
+    }
+
+    function fecharVideo() {
+      document.getElementById('modalVideo').style.display = 'none';
+    }
+  </script>
 
 </body>
 </html>
+
