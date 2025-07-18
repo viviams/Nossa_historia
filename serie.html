@@ -5,25 +5,30 @@
   <title>Viviam & Amor</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pagina-serie">
 
-  <header class="header">
-    <h1>❤️ Viviam & Amor ❤️</h1>
+  <!-- TOPO -->
+  <header class="header-serie">
+    <div class="logo-serie">❤️ ViviamFlix ❤️</div>
     <nav>
+      <a href="#">Início</a>
+      <a href="#">Séries</a>
+      <a href="#">Filmes</a>
+      <a href="#">Minha Lista</a>
       <a href="index.html">Sair do Perfil</a>
     </nav>
   </header>
 
-  <!-- Seção destacada (como banner principal) -->
-  <section class="destaque">
-    <h2>Nosso Capítulo Especial</h2>
-    <div class="banner" onclick="abrirVideo()">
-      <img src="https://img.youtube.com/vi/SEU_VIDEO_ID/maxresdefault.jpg" alt="Banner do Vídeo">
+  <!-- DESTAQUE -->
+  <section class="destaque" onclick="abrirVideo()">
+    <div class="conteudo-destaque">
+      <h1>Nosso Capítulo Especial</h1>
+      <p>Uma história de amor como nenhuma outra.</p>
       <button>Assistir agora</button>
     </div>
   </section>
 
-  <!-- Modal do vídeo -->
+  <!-- MODAL VIDEO -->
   <div class="modal-video" id="modalVideo">
     <div class="video-container">
       <span class="fechar" onclick="fecharVideo()">&times;</span>
@@ -31,14 +36,22 @@
     </div>
   </div>
 
-  <!-- Carrossel de imagens -->
+  <!-- CARROSSEL DE SESSÕES -->
   <section class="carrossel">
     <h2>Anos Inesquecíveis</h2>
-    <div class="linha-carrossel">
+    <div class="itens">
       <img src="https://i.imgur.com/KCHkOn5.jpeg" alt="2019">
       <img src="https://i.imgur.com/B0Ml0ZV.jpeg" alt="2020">
       <img src="https://i.imgur.com/lM6nDOg.jpeg" alt="2021">
-      <!-- Adicione mais imagens aqui -->
+    </div>
+  </section>
+
+  <section class="carrossel">
+    <h2>Momentos Favoritos</h2>
+    <div class="itens">
+      <img src="https://i.imgur.com/lM6nDOg.jpeg" alt="momento1">
+      <img src="https://i.imgur.com/KCHkOn5.jpeg" alt="momento2">
+      <img src="https://i.imgur.com/B0Ml0ZV.jpeg" alt="momento3">
     </div>
   </section>
 
