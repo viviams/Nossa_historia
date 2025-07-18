@@ -313,4 +313,36 @@ body.pagina-serie {
 .itens img:hover {
   transform: scale(1.05);
 }
+.card {
+  position: relative;
+  display: inline-block;
+}
+
+.card img {
+  width: 220px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+.progresso {
+  width: 100%;
+  height: 5px;
+  background-color: #444;
+  margin-top: 4px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progresso-preenchido {
+  height: 100%;
+  background-color: red;
+  width: 0%;
+}
 
