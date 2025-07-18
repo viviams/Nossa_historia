@@ -5,6 +5,7 @@
   font-family: Arial, sans-serif;
 }
 
+/* === Página de seleção de perfil === */
 body.gerenciar-perfis {
   background-color: #000;
   color: #fff;
@@ -67,7 +68,6 @@ body.gerenciar-perfis {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  border: none;
 }
 
 .perfil-box p {
@@ -75,7 +75,6 @@ body.gerenciar-perfis {
   font-size: 1em;
   font-weight: bold;
   color: #fff;
-  transition: color 0.2s ease-in-out;
 }
 
 .btn-concluir {
@@ -94,45 +93,56 @@ body.gerenciar-perfis {
   background-color: #e5e5e5;
 }
 
-/* Estilo apenas para a página da série */
+/* === Página da série === */
 body.pagina-serie {
   background-color: #000;
   color: #fff;
-  font-family: Arial, sans-serif;
-  margin: 0;
 }
 
-/* Header personalizado */
+/* Header fixo */
 .header-serie {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111;
-  padding: 20px;
+  background: #141414;
+  padding: 20px 40px;
 }
 
 .logo-serie {
-  font-size: 1.5em;
-}
-
-.header-serie nav a {
-  color: #ccc;
-  text-decoration: none;
+  font-size: 1.8em;
+  color: red;
   font-weight: bold;
 }
 
+.header-serie nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-serie nav a {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95em;
+  transition: color 0.3s;
+}
+
 .header-serie nav a:hover {
-  color: #fff;
+  color: white;
 }
 
 /* Destaque */
 .destaque {
+  margin-top: 80px;
   background: url('https://i.imgur.com/lM6nDOg.jpeg') center/cover no-repeat;
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
 }
 
 .conteudo-destaque {
@@ -166,7 +176,7 @@ body.pagina-serie {
   background-color: #e5e5e5;
 }
 
-/* Modal do vídeo */
+/* Modal vídeo */
 .modal-video {
   position: fixed;
   top: 0; left: 0;
@@ -215,89 +225,6 @@ body.pagina-serie {
   gap: 20px;
   overflow-x: auto;
   scroll-behavior: smooth;
-}
-
-.itens img {
-  width: 220px;
-  height: 130px;
-  object-fit: cover;
-  border-radius: 6px;
-  flex-shrink: 0;
-  transition: transform 0.2s ease-in-out;
-}
-
-.itens img:hover {
-  transform: scale(1.05);
-}
-
-/* Rodapé */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #111;
-  color: #aaa;
-}
-
-body.pagina-serie {
-  background-color: #000;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  margin: 0;
-}
-
-.header-serie {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #141414;
-  padding: 20px 40px;
-}
-
-.header-serie nav a {
-  margin-left: 20px;
-  color: #e5e5e5;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 0.95em;
-}
-
-.header-serie nav a:hover {
-  color: white;
-}
-
-.logo-serie {
-  font-size: 1.5em;
-  color: red;
-  font-weight: bold;
-}
-
-.destaque {
-  margin-top: 80px; /* por causa do header fixo */
-  background: url('https://i.imgur.com/lM6nDOg.jpeg') center/cover no-repeat;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.carrossel {
-  padding: 30px 20px;
-}
-
-.carrossel h2 {
-  font-size: 1.5em;
-  margin-bottom: 15px;
-}
-
-.itens {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
   padding-bottom: 10px;
 }
 
@@ -313,6 +240,8 @@ body.pagina-serie {
 .itens img:hover {
   transform: scale(1.05);
 }
+
+/* Card com progresso */
 .card {
   position: relative;
   display: inline-block;
@@ -344,5 +273,13 @@ body.pagina-serie {
   height: 100%;
   background-color: red;
   width: 0%;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: #aaa;
 }
 
